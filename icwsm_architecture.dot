@@ -1,0 +1,48 @@
+digraph ICWSM_ContextualAgents {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#f5f5f5", color="#555555", fontname="Helvetica"];
+
+  Post [label="Input Post\n(text + image/video captions + metadata)"];
+  Planner [label="Planner Agent\n(routing: choose components)"];
+  WHAT [label="WHAT Agent\n(multimodal content)"];
+  WHO [label="WHO Agent\n(synthetic persona + history)"];
+  WHEN [label="WHEN Agent\n(contemporary events)"];
+  WHERE [label="WHERE Agent\n(surface + norms)"];
+  HOW [label="HOW Agent\n(engagement + reactions)"];
+  Verifier [label="Verifier/Auditor Agent\n(grounding + contradictions + privacy)"];
+  Synth [label="Synthesizer Agent\n(situational interpretation)"];
+  Output [label="Output\nContext Object + Final Summary\n+ Confidence + Limits", shape=box, fillcolor="#e8f5e9"];
+
+  Post -> Planner;
+
+  Planner -> WHAT;
+  Planner -> WHO;
+  Planner -> WHEN;
+  Planner -> WHERE;
+  Planner -> HOW;
+
+  WHAT -> Verifier;
+  WHO -> Verifier;
+  WHEN -> Verifier;
+  WHERE -> Verifier;
+  HOW -> Verifier;
+
+  Verifier -> Synth;
+  Synth -> Output;
+
+  subgraph cluster_routing {
+    label="Agentic Routing (dynamic)";
+    style="dashed";
+    color="#aaaaaa";
+    Planner;
+    WHAT; WHO; WHEN; WHERE; HOW;
+  }
+
+  subgraph cluster_validation {
+    label="Validation Loop";
+    style="dashed";
+    color="#aaaaaa";
+    Verifier;
+    Synth;
+  }
+}
