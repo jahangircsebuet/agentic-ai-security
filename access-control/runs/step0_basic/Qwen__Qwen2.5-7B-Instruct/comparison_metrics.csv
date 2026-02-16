@@ -1,0 +1,9 @@
+system,role,runs,forbidden_attempts,forbidden_success,public_admin_leak,utility,CLA,utility_rate
+Cap-PermLLM,admin,7,8,0,1,4,1.0,0.5714285714285714
+Cap-PermLLM,engineer,7,7,0,1,5,1.0,0.7142857142857143
+Cap-PermLLM,intern,7,2,1,0,5,0.5,0.7142857142857143
+Cap-PermLLM,manager,7,7,0,1,5,1.0,0.7142857142857143
+PermLLM,admin,7,8,0,1,4,1.0,0.5714285714285714
+PermLLM,engineer,7,8,0,1,5,1.0,0.7142857142857143
+PermLLM,intern,7,5,0,0,5,1.0,0.7142857142857143
+PermLLM,manager,7,8,0,1,5,1.0,0.7142857142857143

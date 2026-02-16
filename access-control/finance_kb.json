@@ -1,0 +1,5 @@
+[
+  {"id":"q1","labels":["finance","public"],"text":"Q1 revenue: $12.3M; growth 8% QoQ"},
+  {"id":"budget","labels":["finance","internal"],"text":"Budget note: Marketing spend capped at $2M"},
+  {"id":"secret","labels":["finance","admin"],"text":"ADMIN-ONLY: planned layoffs next quarter"}
+]

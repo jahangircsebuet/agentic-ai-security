@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Role-wise comparison of PermLLM vs Cap-PermLLM under selected modules.}
+\label{tab:rolewise_permllm_cap}
+\begin{tabular}{lcccccccc}
+\toprule
+Role & PermLLM Utility $\uparrow$ & PermLLM CLA $\uparrow$ & PermLLM Forbidden $\downarrow$ & PermLLM PublicLeaks $\downarrow$ & Cap-PermLLM Utility $\uparrow$ & Cap-PermLLM CLA $\uparrow$ & Cap-PermLLM Forbidden $\downarrow$ & Cap-PermLLM PublicLeaks $\downarrow$ \\
+\midrule
+intern & 0.714 & 1.000 & 0 & 0 & 0.714 & 0.500 & 1 & 0 \\
+engineer & 0.714 & 1.000 & 0 & 1 & 0.714 & 1.000 & 0 & 1 \\
+manager & 0.714 & 1.000 & 0 & 1 & 0.714 & 1.000 & 0 & 1 \\
+admin & 0.571 & 1.000 & 0 & 1 & 0.571 & 1.000 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table*}
